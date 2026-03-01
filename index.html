@@ -1,309 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base target="_self">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Skills & Services Platform</title>
-    <meta name="description" content="Professional IT services and skills training platform for Africa and international clients">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yolamu Timothy Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
-<body class="min-h-screen bg-gray-50">
+<body>
 
-<!-- Header & Navigation -->
-<header class="bg-white shadow-sm sticky top-0 z-20">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="text-2xl font-bold text-blue-600">IT Skills Platform</div>
-    <nav class="hidden md:flex space-x-6" id="main-nav">
-      <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-blue-50">Home</a>
-      <a href="#courses" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-blue-50">Courses</a>
-      <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-blue-50">Services</a>
-      <a href="#blog" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-blue-50">Knowledge Hub</a>
-      <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-blue-50">Contact</a>
-      <a href="#login" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-blue-50">Login</a>
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="desktop-nav">
+      <div class="logo">Yolamu Timothy</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
-    <button class="md:hidden focus:outline-none" id="mobile-menu-btn" aria-label="Open navigation menu">
-      <i class="fas fa-bars text-xl"></i>
-    </button>
-  </div>
-  <!-- Mobile Nav -->
-  <nav class="hidden md:hidden bg-white border-t shadow px-4 py-4 space-y-2" id="mobile-nav">
-    <a href="#home" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Home</a>
-    <a href="#courses" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Courses</a>
-    <a href="#services" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Services</a>
-    <a href="#blog" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Knowledge Hub</a>
-    <a href="#contact" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Contact</a>
-    <a href="#login" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-blue-50">Login</a>
-  </nav>
-</header>
-
-<!-- Hero Section -->
-<section id="home" class="bg-blue-700 text-white py-20">
-  <div class="container mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">Transform Your IT Skills</h1>
-    <p class="text-xl mb-8 max-w-2xl mx-auto">
-      Professional training and services to boost your career or business technology capabilities
-    </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="#courses" class="bg-white text-blue-700 px-6 py-3 rounded-md font-semibold hover:bg-blue-50">Explore Courses</a>
-      <a href="#services" class="bg-transparent border-2 border-white px-6 py-3 rounded-md font-semibold hover:bg-blue-600">Our Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- Featured Courses -->
-<section id="courses" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-12 text-center">Featured Courses</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <img src="https://picsum.photos/400/300?random=101" alt="Web Development Fundamentals" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-bold">Web Development Fundamentals</h3>
-            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Full Stack Web Development</span>
-          </div>
-          <p class="text-gray-600 mb-4">Learn HTML, CSS, JavaScript and PHP from scratch</p>
-          <div class="flex justify-between items-center">
-            <span class="font-bold">$80.99</span>
-            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enroll Now</a>
-          </div>
+  
+    <!-- ===== HAMBURGER NAV ===== -->
+    <nav id="hamburger-nav">
+      <div class="logo">Yolamu Timothy</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
         </div>
-      </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <img src="https://picsum.photos/400/300?random=102" alt="Database Design & Management" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-bold">Database Design & Management</h3>
-            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Database</span>
-          </div>
-          <p class="text-gray-600 mb-4">Master relational database Design, postgreSQL for Beginners, MYSQL, NOSQL Databases: MongoDB Basics, In-Memory Databases: Redis Essentials and more</p>
-          <div class="flex justify-between items-center">
-            <span class="font-bold">$59.99</span>
-            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <img src="https://picsum.photos/400/300?random=103" alt="Data Analytics" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <div class="flex justify-between items-start mb-2">
-            <h3 class="text-xl font-bold">Data Analytics</h3>
-            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Analytics</span>
-          </div>
-          <p class="text-gray-600 mb-4">Master Excel, Power BI, pandas, seaborn, matplotlib, Numpy and data visualization</p>
-          <div class="flex justify-between items-center">
-            <span class="font-bold">$59.99</span>
-            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enroll Now</a>
-          </div>
-        </div>
-      </div>
-      <!-- Add more courses as needed -->
-    </div>
-    <div class="text-center mt-8">
-      <a href="#courses" class="text-blue-600 font-semibold hover:underline">View All Courses →</a>
-    </div>
-  </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="py-16 bg-gray-100">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-12 text-center">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-code"></i></div>
-        <h3 class="text-xl font-bold mb-2">Web Development</h3>
-        <p class="text-gray-600 mb-4">Custom website and web application development</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-database"></i></div>
-        <h3 class="text-xl font-bold mb-2">Database Design</h3>
-        <p class="text-gray-600 mb-4">Database architecture and optimization services</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-chart-bar"></i></div>
-        <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
-        <p class="text-gray-600 mb-4">Unlock insights from your data with analytics solutions</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-robot"></i></div>
-        <h3 class="text-xl font-bold mb-2">AI Chat Bot Development</h3>
-        <p class="text-gray-600 mb-4">Build intelligent chatbots for customer engagement</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-user-tie"></i></div>
-        <h3 class="text-xl font-bold mb-2">IT Consultancy</h3>
-        <p class="text-gray-600 mb-4">Expert advice to optimize your IT strategy</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-sync-alt"></i></div>
-        <h3 class="text-xl font-bold mb-2">Digital Transformation</h3>
-        <p class="text-gray-600 mb-4">Modernize your business with digital solutions</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-headset"></i></div>
-        <h3 class="text-xl font-bold mb-2">Technical Support</h3>
-        <p class="text-gray-600 mb-4">Reliable tech support for your business needs</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-project-diagram"></i></div>
-        <h3 class="text-xl font-bold mb-2">System Integration</h3>
-        <p class="text-gray-600 mb-4">Seamless integration of your IT systems</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-briefcase"></i></div>
-        <h3 class="text-xl font-bold mb-2">Freelancing & Remote Projects</h3>
-        <p class="text-gray-600 mb-4">Access top IT talent for your remote projects</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-brain"></i></div>
-        <h3 class="text-xl font-bold mb-2">Machine Learning Services</h3>
-        <p class="text-gray-600 mb-4">Implement machine learning for smarter solutions</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Blog Section -->
-<section id="blog" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-12 text-center">Knowledge Hub</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <img src="https://picsum.photos/400/300?random=201" alt="Getting Started with Web Development" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm text-gray-500">May 15, 2023</span>
-            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Development</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Getting Started with Web Development</h3>
-          <p class="text-gray-600 mb-4">Learn the fundamentals of HTML, CSS, and JavaScript to start your web development journey.</p>
-          <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-        <img src="https://picsum.photos/400/300?random=202" alt="Database Design Best Practices" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-sm text-gray-500">June 2, 2023</span>
-            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Database</span>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Database Design Best Practices</h3>
-          <p class="text-gray-600 mb-4">Key principles for designing efficient and scalable database systems.</p>
-          <a href="#" class="text-blue-600 font-semibold hover:underline">Read More →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="py-12">
-  <div class="container mx-auto px-4">
-    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-      <div class="md:flex">
-        <div class="md:w-1/2 bg-blue-700 text-white p-8">
-          <h2 class="text-2xl font-bold mb-6">Contact Us</h2>
-          <div class="space-y-4">
-            <div class="flex items-start">
-              <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
-              <div>
-                <h4 class="font-semibold">Address</h4>
-                <p>123 Tech Street, Digital City</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <i class="fas fa-phone-alt mt-1 mr-4"></i>
-              <div>
-                <h4 class="font-semibold">Phone</h4>
-                <p>+123 456 7890</p>
-              </div>
-            </div>
-            <div class="flex items-start">
-              <i class="fas fa-envelope mt-1 mr-4"></i>
-              <div>
-                <h4 class="font-semibold">Email</h4>
-                <p>info@itskills.com</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-8">
-            <h4 class="font-semibold mb-4">Follow Us</h4>
-            <div class="flex space-x-4">
-              <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="text-xl"><i class="fab fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="md:w-1/2 p-8">
-          <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
-          <form>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="name">Name</label>
-              <input type="text" id="name" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="email">Email</label>
-              <input type="email" id="email" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="subject">Subject</label>
-              <input type="text" id="subject" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2" for="message">Message</label>
-              <textarea id="message" rows="4" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-            </div>
-            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors">
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-8 mt-8">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <h3 class="text-xl font-bold mb-4">IT Skills Platform</h3>
-        <p>Providing professional IT services and skills training across Africa and internationally.</p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-        <ul class="space-y-2">
-          <li><a href="#home" class="hover:text-blue-300 focus:underline">Home</a></li>
-          <li><a href="#courses" class="hover:text-blue-300 focus:underline">Courses</a></li>
-          <li><a href="#services" class="hover:text-blue-300 focus:underline">Services</a></li>
-          <li><a href="#blog" class="hover:text-blue-300 focus:underline">Knowledge Hub</a></li>
-          <li><a href="#contact" class="hover:text-blue-300 focus:underline">Contact</a></li>
-          <li><a href="#login" class="hover:text-blue-300 focus:underline">Login</a></li>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
-        <p>Email: info@itskills.com</p>
-        <p>Phone: +256 789137703</p>
-        <div class="flex space-x-4 mt-4">
-          <a href="#" class="text-xl hover:text-blue-400"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="text-xl hover:text-blue-400"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-xl hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+    </nav>
+  
+    <!-- ===== PROFILE SECTION ===== -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Yolamu Timothy profile picture">
+      </div>
+  
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Yolamu Timothy</h1>
+        <p class="section__text__p2">Software Engineering</p>
+  
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/my-resume.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Me</button>
+        </div>
+  
+        <div id="social-container">
+          <a href="https://www.linkedin.com/in/yolamu-timothy-ug" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/linkedin.png" alt="LinkedIn" class="icon">
+          </a>
+          <a href="https://www.github.com/yolamutimothy256" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/github.png" alt="GitHub" class="icon">
+          </a>
         </div>
       </div>
-    </div>
-    <div class="border-t border-gray-700 mt-8 pt-6 text-center">
-      <p>&copy; <span id="year"></span> IT Skills Platform. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#about'">
+    </section>
+  
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+      <p class="section__text__p1">Get to know more</p>
+      <h1 class="title">About Me</h1>
+  
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic">
+        </div>
+  
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.jpg" alt="Experience icon" class="icon">
+              <h3>Experience</h3>
+              <p>2+ years<br>Frontend & Backend Developer.</p>
+            </div>
+  
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon">
+              <h3>Education</h3>
+              <p>Bachelor’s Degree in Business Computing<br>IT and Software Egineering</p>
+            </div>
+          </div>
+  
+          <div class="text-container">
+            <p>Yolamu Timothy is a very motivated and self-motivated individual with a passion for software development,
+               IT systems, and technology. I enjoy problem-solving, learning new tools and technology, and applying my abilities
+                to solve real-world problems.
+               <br>I'm committed to growing both technically and professionally. My areas of interest include software development,
+                system support, AI chat Bots and data solutions that improve productivity and efficiency.
+               <br>I'm looking forward to learning, working with others, and seeking opportunities that lay a good foundation for a 
+               tech-related career. I thrive in environments where I can contribute, grow myself, and make a meaningful impact.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'">
+    </section>
+  
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+  
+      <div class="experience-details-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Developer</h2>
+          <div class="article-container">
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>HTML</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>CSS</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>JavaScript</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>React.js</h3><p>Intermediate</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Next.js</h3><p>Basic</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Laravel(Framework)</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Flutter(Dart)</h3><p>Experienced</p></div></article>
+          </div>
+        </div>
+  
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Developer</h2>
+          <div class="article-container">
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Nodejs</h3><p>Intermediate</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Django</h3><p>Intermediate</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>SQL</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>PHP</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Java</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>MySQL</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>PostgreSQL</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Git</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/checkmark.png" class="icon"><div><h3>Python</h3><p>Experienced</p></div></article>
+          </div>
+        </div>
+      </div>
+  
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'">
+    </section>
+  
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects">
+      <p class="section__text__p1">My Recent</p>
+      <h1 class="title">Projects</h1>
+  
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="./assets/project-1.jpg" alt="Project 1 screenshot" class="project-img">
+          <h3>Project One</h3>
+          <p>Customer Relationship Managemet management System(CRM-ClientNest.)</p>
+          <div class="button-container">
+            <button class="btn btn-color-1" onclick="location.href='https://github.com'">GitHub</button>
+            <button class="btn btn-color-2" onclick="location.href='https://github.com'">Live Demo</button>
+          </div>
+        </div>
+  
+        <div class="project-card">
+          <img src="./assets/project-2.jpg" alt="Project 2 screenshot" class="project-img">
+          <h3>Project Two</h3>
+          <p>A Tourism Booking System where Tourists can book in with our company.</p>
+          <div class="button-container">
+            <button class="btn btn-color-1" onclick="location.href='https://github.com'">GitHub</button>
+            <button class="btn btn-color-2" onclick="location.href='https://github.com'">Live Demo</button>
+          </div>
+        </div>
+  
+        <div class="project-card">
+          <img src="./assets/project-3.jpg" alt="Project 3 screenshot" class="project-img">
+          <h3>Project Three</h3>
+          <p>Appointment Booking System where clients can schedule for meetings.</p>
+          <div class="button-container">
+            <button class="btn btn-color-1" onclick="location.href='https://github.com'">GitHub</button>
+            <button class="btn btn-color-2" onclick="location.href='https://github.com'">Live Demo</button>
+          </div>
+        </div>
 
-<!-- Mobile Nav Toggle Script -->
-<script src="main.js"></script>
-</body>
-</html>
+        <div class="project-card">
+          <img src="./assets/project-4.jpg" alt="Project 3 screenshot" class="project-img">
+          <h3>Project Four</h3>
+          <p>Developed a Bus Ticketing System For Comfort Travellers, Apac Uganda.</p>
+          <div class="button-container">
+            <button class="btn btn-color-1" onclick="location.href='https://github.com'">GitHub</button>
+            <button class="btn btn-color-2" onclick="location.href='https://github.com'">Live Demo</button>
+          </div>
+        </div>
+
+        
+      </div>
+  
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'">
+    </section>
+  
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+      <p class="section__text__p1">Get in</p>
+      <h1 class="title">Contact With</h1>
+  
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon">
+          <p><a href="mailto:yolamutimothy@gmail.com">yolamutimothy@gmail.com</a></p>
+        </div>
+  
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon">
+          <p><a href="https://www.linkedin.com/in/yolamu-timothy-ug" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <!-- <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav> -->
+
+      <footer class="footer">
+          <p>&copy; 2026 Yolamu Timothy. All Rights Reserved.</p>
+
+         <p class="mb-0 small text-white d-none d-sm-block">
+          Made with <span style="color:#ff6b81;">❤</span> by Yolamu Timothy.
+         </p>
+        </footer>
+    </footer>
+  
+    <script src="script.js"></script>
+  </body>
+  </html>
