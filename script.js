@@ -1,6 +1,6 @@
 function toggleMenu(){
     const menu = document.getElementById('mobile-menu') || document.querySelector('.menu-links');
-    const btn = document.querySelector('.humburger-icon');
+    const btn = document.querySelector('.hamburger-icon');
     if(!menu || !btn) return;
 
     const isOpen = menu.classList.toggle('open');
@@ -12,7 +12,7 @@ function toggleMenu(){
 document.addEventListener('keydown', function(e){
     if(e.key === 'Escape'){
         const menu = document.getElementById('mobile-menu') || document.querySelector('.menu-links');
-        const btn = document.querySelector('.humburger-icon');
+        const btn = document.querySelector('.hamburger-icon');
         if(menu && menu.classList.contains('open')){
             menu.classList.remove('open');
             if(btn){

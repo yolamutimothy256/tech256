@@ -430,22 +430,44 @@ article p {
    
   }
   
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-    }
-    .projects-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    .icon.arrow {
-      right: 5%;
-      width: 20px;
-    }
+  /* ===== PERFORMANCE IMPROVEMENTS (all screens) ===== */
+.projects-container {
+  display: flex;           /* Flex layout for projects */
+  flex-wrap: wrap;         /* Allow items to wrap naturally */
+  transition: all 0.3s ease; /* Smooth layout changes */
+}
+
+.icon.arrow {
+  max-width: 20px;         /* Limit icon size */
+  height: auto;            /* Maintain aspect ratio */
+}
+
+#hamburger-nav {
+  will-change: transform, opacity; /* Optimize menu animations */
+}
+
+.projects-container img {
+  loading: lazy;           /* Lazy-load images for faster load */
+  width: 100%;             /* Scale images to container */
+  height: auto;            /* Maintain aspect ratio */
+}
+
+/* ===== RESPONSIVE STYLES FOR MOBILE (≤768px) ===== */
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;         /* Hide desktop menu */
   }
   
-    
+  #hamburger-nav {
+    display: flex;         /* Show mobile menu */
+  }
+  
+  .projects-container {
+    flex-direction: column; /* Stack projects vertically */
+    align-items: center;    /* Center them horizontally */
+  }
+  
+  .icon.arrow {
+    right: 5%;             /* Adjust arrow position for small screens */
+  }
+}
